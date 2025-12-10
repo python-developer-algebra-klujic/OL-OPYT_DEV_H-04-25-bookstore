@@ -35,3 +35,6 @@ class Book(models.Model):
 
     class Meta:
         ordering = ['-publication_date', 'title']
+
+    def __str__(self):
+        return f'{self.title} ({self.publication_date})'
