@@ -5,6 +5,6 @@ from .views import (PublisherListView,
 
 
 urlpatterns = [
-    path('', PublisherListView.as_view()),
-    path('<int:pk>/', PublisherDetailView.as_view())
+    path('publishers/', PublisherListView.as_view()),
+    path('publishers/<int:pk>/', PublisherDetailView.as_view())
 ]
