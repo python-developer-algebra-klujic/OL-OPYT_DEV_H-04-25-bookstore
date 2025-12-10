@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from .models.publishers import Publisher
+
+
+class PublisherListView(ListView):
+    model = Publisher
+    context_object_name = 'publisher_list'

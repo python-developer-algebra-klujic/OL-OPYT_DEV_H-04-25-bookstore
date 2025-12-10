@@ -1,0 +1,12 @@
+{% extends "base/base.html" %}
+
+{% block page_content %}
+    <h2>Publishers</h2>
+    <ul>
+        {% for publisher in publisher_list %}
+            <li>{{ publisher.name }}</li>
+        {% empty %}
+            <p>U baze nema niti jedan izdavac</p>
+        {% endfor %}
+    </ul>
+{% endblock page_content %}
