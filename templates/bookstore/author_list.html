@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+
+{% block page_content %}
+    <h2>Authors</h2>
+    <ul>
+        {% for author in author_list %}
+            <li>
+                <a href={% url 'author_details' author.pk %}>
+                    {{ author.name }}
+                </a>
+            </li>
+        {% empty %}
+            <p>U bazi nema niti jednog autora</p>
+        {% endfor %}
+    </ul>
+{% endblock page_content %}

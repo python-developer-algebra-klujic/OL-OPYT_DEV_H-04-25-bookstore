@@ -4,7 +4,11 @@
     <h2>Publishers</h2>
     <ul>
         {% for publisher in publisher_list %}
-            <li>{{ publisher.name }}</li>
+            <li>
+                <a href={% url 'publisher_details' publisher.pk %}>
+                    {{ publisher.name }}
+                </a>
+            </li>
         {% empty %}
             <p>U bazi nema niti jedan izdavac</p>
         {% endfor %}
