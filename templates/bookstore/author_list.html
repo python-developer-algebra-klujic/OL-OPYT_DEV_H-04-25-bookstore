@@ -1,7 +1,10 @@
 {% extends "base/base.html" %}
 
 {% block page_content %}
-    <h2>Authors</h2>
+    <div class="d-flex flex-row justify-content-between my-3">
+        <h2>Authors</h2>
+        <a class="mb-2 btn btn-outline-primary" href="{% url 'author_create' %}">Add Author</a>
+    </div>
     <ul>
         {% for author in author_list %}
             <li>
